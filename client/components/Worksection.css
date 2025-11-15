@@ -1,0 +1,14 @@
+@media(min-width: 768px) {
+
+    .card-style-img{
+              border-radius: 180px 11px 11px 19px;
+    }
+    .card-style-text{
+        text-align: left;
+        background-color: #c2f8e27a;
+        padding: 10px;
+        height: 322px;
+        border-radius: 5px 13px 162px 7px;
+    }
+    
+}
