@@ -12,30 +12,35 @@ const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 export function ThemeProvider({ children }: { children: ReactNode }) {
   const [theme, setTheme] = useState<Theme>('light');
 
-  // Check system preference on initial load
+  // Initialize theme from session storage or system preference (reset on page refresh)
   useEffect(() => {
     const root = window.document.documentElement;
+    const sessionTheme = sessionStorage.getItem('theme') as Theme | null;
     const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     
-    // Set initial theme based on system preference
-    if (systemPrefersDark) {
+    // Use session theme if available (maintains during navigation), otherwise use system preference
+    const initialTheme = sessionTheme || (systemPrefersDark ? 'dark' : 'light');
+    
+    setTheme(initialTheme);
+    
+    // Apply initial theme
+    if (initialTheme === 'dark') {
       root.classList.add('dark');
       root.style.colorScheme = 'dark';
-      setTheme('dark');
     } else {
       root.classList.remove('dark');
       root.style.colorScheme = 'light';
-      setTheme('light');
     }
-    
-    // Clear any saved theme preference
-    localStorage.removeItem('theme');
   }, []);
 
-  // Apply theme class to root element when theme changes
+  // Save theme to sessionStorage and apply to root element when theme changes
   useEffect(() => {
     const root = window.document.documentElement;
     
+    // Save to sessionStorage (persists during navigation, clears on page refresh)
+    sessionStorage.setItem('theme', theme);
+    
+    // Apply to root element
     if (theme === 'dark') {
       root.classList.add('dark');
       root.style.colorScheme = 'dark';
