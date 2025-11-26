@@ -43,10 +43,10 @@ export default function AboutSection() {
           }`}
         >
           <span className="inline-block text-blue-600 font-semibold text-sm uppercase tracking-wider mb-4">
-            About TRM Consultancy
+            About Upsoma
           </span>
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-            Why Choose TRM for Web Development?
+            Why Choose Upsoma for Web Development?
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
             We're India's trusted web development agency with proven expertise in building high-performing websites and web applications for businesses of all sizes.

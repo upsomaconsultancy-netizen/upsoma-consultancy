@@ -1,9 +1,13 @@
-import { defineConfig, Plugin } from "vite";
+import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
+import { fileURLToPath } from "url";
 import { createServer } from "./server";
 
-// https://vitejs.dev/config/
+// Fix for __dirname in ESM/Vite
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 export default defineConfig(({ mode }) => ({
   server: {
     host: "::",
@@ -13,10 +17,27 @@ export default defineConfig(({ mode }) => ({
       deny: [".env", ".env.*", "*.{crt,pem}", "**/.git/**", "server/**"],
     },
   },
+
   build: {
     outDir: "dist/spa",
   },
-  plugins: [react(), expressPlugin()],
+
+  plugins: [
+    react(),
+    // Express middleware plugin – FIXED
+    {
+      name: "express-middleware",
+      apply: "serve", // applies only in dev mode
+      configureServer(viteServer) {
+        const app = createServer();
+        // IMPORTANT FIX: use function format, not object
+        viteServer.middlewares.use((req, res, next) => {
+          app(req, res, next);
+        });
+      },
+    },
+  ],
+
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./client"),
@@ -24,16 +45,3 @@ export default defineConfig(({ mode }) => ({
     },
   },
 }));
-
-function expressPlugin(): Plugin {
-  return {
-    name: "express-plugin",
-    apply: "serve", // Only apply during development (serve mode)
-    configureServer(server) {
-      const app = createServer();
-
-      // Add Express app as middleware to Vite dev server
-      server.middlewares.use(app);
-    },
-  };
-}

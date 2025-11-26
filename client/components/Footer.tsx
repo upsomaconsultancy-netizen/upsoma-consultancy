@@ -30,6 +30,7 @@ import {
   FaInstagram,
   FaGithub,
   FaYoutube,
+  FaWhatsapp,
 } from "react-icons/fa6";
 
 export default function Footer() {
@@ -234,12 +235,12 @@ const handleContactSubmit = async (e) => {
                       className="text-white font-bold text-lg"
                       itemProp="name"
                     >
-                      TRM
+                      U
                     </span>
                   </div>
                   <div>
                     <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 bg-clip-text text-transparent">
-                      TRM Consultancy
+                      Upsoma
                     </h3>
                     <p className="text-sm text-gray-600 dark:text-gray-400">
                       Web Development Experts
@@ -381,31 +382,31 @@ const handleContactSubmit = async (e) => {
                     {
                       icon: FaLinkedinIn,
                       label: "LinkedIn",
-                      url: "https://linkedin.com/company/trmconsultancy",
+                      url: "https://linkedin.com/company/upsoma",
                       bg: "bg-[#0A66C2] hover:bg-[#0A5AAD]",
                     },
                     {
                       icon: FaXTwitter,
                       label: "X",
-                      url: "https://x.com/trmconsultancy",
+                      url: "https://x.com/upsoma",
                       bg: "bg-black hover:bg-gray-800",
                     },
                     {
                       icon: FaFacebookF,
                       label: "Facebook",
-                      url: "https://facebook.com/trmconsultancy",
+                      url: "https://facebook.com/upsoma",
                       bg: "bg-[#1877F2] hover:bg-[#166FE5]",
                     },
                     {
                       icon: FaInstagram,
                       label: "Instagram",
-                      url: "https://instagram.com/trmconsultancy",
+                      url: "https://instagram.com/upsoma",
                       bg: "bg-gradient-to-r from-[#F58529] via-[#DD2A7B] to-[#8134AF] hover:opacity-90",
                     },
                     {
                       icon: FaYoutube,
                       label: "YouTube",
-                      url: "https://youtube.com/@trmconsultancy",
+                      url: "https://youtube.com/@upsoma",
                       bg: "bg-[#FF0000] hover:bg-[#E60000]",
                     },
                   ].map((social, index) => {
@@ -439,10 +440,30 @@ const handleContactSubmit = async (e) => {
                 </h4>
                 <div className="space-y-4">
                   <a
-                    href="mailto:hello@trmconsultancy.com"
+                    href="https://wa.me/918178353728"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-start gap-3 group p-3 rounded-lg hover:bg-white hover:shadow-lg transition-all duration-300"
+                    aria-label="Contact us on WhatsApp"
+                  >
+                    <div className="flex items-start gap-4">
+                      <div className="w-10 h-10 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center flex-shrink-0">
+                        <FaWhatsapp className="w-5 h-5 text-green-600 dark:text-green-400" />
+                      </div>
+                      <div>
+                        <p className="text-sm text-gray-500 dark:text-gray-400">WhatsApp</p>
+                        <p className="text-gray-800 dark:text-gray-200 hover:text-green-600 dark:hover:text-green-400 transition-colors">
+                          +91 8178353728
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+
+                  <a
+                    href="mailto:upsomaconsultancy@gmail.com"
                     className="flex items-start gap-3 group p-3 rounded-lg hover:bg-white hover:shadow-lg transition-all duration-300"
                     itemProp="email"
-                    aria-label="Email TRM Consultancy"
+                    aria-label="Email Upsoma"
                   >
                     <div className="flex items-start gap-4">
                       <div className="w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center flex-shrink-0">
@@ -451,17 +472,17 @@ const handleContactSubmit = async (e) => {
                       <div>
                         <p className="text-sm text-gray-500 dark:text-gray-400">Email</p>
                         <p className="text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-                          hello@trmconsultancy.com
+                          upsomaconsultancy@gmail.com
                         </p>
                       </div>
                     </div>
                   </a>
 
                   <a
-                    href="tel:+918512345678"
+                    href="tel:+918178353728"
                     className="flex items-start gap-3 group p-3 rounded-lg hover:bg-white hover:shadow-lg transition-all duration-300"
                     itemProp="telephone"
-                    aria-label="Call TRM Consultancy"
+                    aria-label="Call Upsoma"
                   >
                     <div className="flex items-start gap-4">
                       <div className="w-10 h-10 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center flex-shrink-0">
@@ -470,7 +491,7 @@ const handleContactSubmit = async (e) => {
                       <div>
                         <p className="text-sm text-gray-500 dark:text-gray-400">Phone</p>
                         <p className="text-gray-800 dark:text-gray-200 hover:text-green-600 dark:hover:text-green-400 transition-colors">
-                          +91 8512 345 678
+                          +91 8178353728
                         </p>
                       </div>
                     </div>
@@ -512,7 +533,7 @@ const handleContactSubmit = async (e) => {
             <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 border-t border-gray-200 dark:border-gray-700">
             <div className="flex flex-col md:flex-row justify-between items-center">
               <p className="text-gray-600 dark:text-gray-300 text-sm">
-                &copy; {new Date().getFullYear()} TRM Consultancy. All rights reserved.
+                &copy; {new Date().getFullYear()} Upsoma. All rights reserved.
               </p>
               </div>
 
@@ -563,11 +584,11 @@ const handleContactSubmit = async (e) => {
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
-              name: "TRM Consultancy Services",
+              name: "Upsoma",
               description:
                 "Premier web development agency in Delhi specializing in custom websites, e-commerce solutions, and mobile applications",
-              url: "https://www.trmconsultancy.com",
-              logo: "https://www.trmconsultancy.com/logo.png",
+              url: "https://www.upsoma.com",
+              logo: "https://www.upsoma.com/logo.png",
               address: {
                 "@type": "PostalAddress",
                 streetAddress: "123 Tech Street",
@@ -577,18 +598,18 @@ const handleContactSubmit = async (e) => {
               },
               contactPoint: {
                 "@type": "ContactPoint",
-                telephone: "+91-8512-345-678",
-                email: "hello@trmconsultancy.com",
+                telephone: "+91 8178353728",
+                email: "upsomaconsultancy@gmail.com",
                 contactType: "customer service",
                 availableLanguage: ["English", "Hindi"],
               },
               sameAs: [
-                "https://linkedin.com/company/trmconsultancy",
-                "https://x.com/trmconsultancy",
-                "https://facebook.com/trmconsultancy",
-                "https://instagram.com/trmconsultancy",
-                "https://github.com/trmconsultancy",
-                "https://youtube.com/@trmconsultancy",
+                "https://linkedin.com/company/upsoma",
+                "https://x.com/upsoma",
+                "https://facebook.com/upsoma",
+                "https://instagram.com/upsoma",
+                "https://github.com/upsoma",
+                "https://youtube.com/@upsoma",
               ],
               aggregateRating: {
                 "@type": "AggregateRating",

@@ -3,8 +3,10 @@ import {
   CheckCircle2, User, Building, Briefcase, Globe,
   Linkedin, Twitter, Facebook, Instagram, ArrowRight
 } from "lucide-react";
-import { useState, useRef, useEffect } from "react";
-import Footer from "../components/Footer";
+import { useState, useEffect, useRef } from "react";
+import SEOHead from "@/components/SEOHead";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 import axios from "axios";
 import { toast } from "sonner";
 
@@ -35,6 +37,208 @@ export default function Contact() {
     }
 
     return () => observer.disconnect();
+  }, []);
+
+  // Enhanced SEO for Contact Page
+  useEffect(() => {
+    document.title = "Contact Us - Web Development Agency Delhi | Upsoma";
+    
+    // Remove existing meta tags to avoid duplicates
+    const removeMeta = (name: string) => {
+      const el = document.querySelector(`meta[name="${name}"], meta[property="${name}"]`);
+      if (el) el.remove();
+    };
+
+    // Remove old meta tags
+    ["description", "keywords", "author", "robots", "og:title", "og:description", 
+     "og:image", "og:url", "og:type", "og:site_name", "twitter:card", 
+     "twitter:title", "twitter:description", "twitter:image", "twitter:site",
+     "geo.region", "geo.placename", "ICBM"].forEach(removeMeta);
+
+    // Create meta tag helper function
+    const setMeta = (property: string, content: string, isProperty = false) => {
+      const tag = document.createElement("meta");
+      tag.setAttribute(isProperty ? "property" : "name", property);
+      tag.content = content;
+      document.head.appendChild(tag);
+    };
+
+    // Basic SEO Meta Tags
+    setMeta("description", "Contact Upsoma - Leading web development agency in Delhi. Get in touch for custom website design, e-commerce solutions, and digital marketing services. Call +91 8178353728 or email upsomaconsultancy@gmail.com.");
+    setMeta("keywords", "contact web developer Delhi, web design agency contact, website development company Delhi, e-commerce development contact, SEO services Delhi, custom website design contact, Upsoma contact details");
+    setMeta("author", "Upsoma Web Services");
+    setMeta("robots", "index, follow, max-snippet:-1, max-image-preview:large");
+    setMeta("language", "en-US");
+    setMeta("geo.region", "IN");
+    setMeta("geo.placename", "Delhi");
+    setMeta("ICBM", "28.6139, 77.2090"); // Delhi coordinates
+    setMeta("distribution", "global");
+    setMeta("rating", "general");
+
+    // Open Graph Meta Tags
+    setMeta("og:title", "Contact Us - Web Development Agency Delhi | Upsoma", true);
+    setMeta("og:description", "Contact Upsoma - Leading web development agency in Delhi. Get in touch for custom website design, e-commerce solutions, and digital marketing services.", true);
+    setMeta("og:type", "website", true);
+    setMeta("og:url", "https://upsoma.in/contact", true);
+    setMeta("og:site_name", "Upsoma Web Services", true);
+    setMeta("og:image", "https://upsoma.in/assets/contact-og-image.jpg", true);
+    setMeta("og:image:width", "1200", true);
+    setMeta("og:image:height", "630", true);
+    setMeta("og:image:alt", "Contact Upsoma Web Development Agency Delhi", true);
+    setMeta("og:locale", "en_US", true);
+
+    // Twitter Card Meta Tags
+    setMeta("twitter:card", "summary_large_image");
+    setMeta("twitter:title", "Contact Us - Web Development Agency Delhi | Upsoma");
+    setMeta("twitter:description", "Contact Upsoma - Leading web development agency in Delhi. Get in touch for custom website design, e-commerce solutions, and digital marketing services.");
+    setMeta("twitter:image", "https://upsoma.in/assets/contact-twitter-image.jpg");
+    setMeta("twitter:image:alt", "Contact Upsoma Web Development Agency Delhi");
+    setMeta("twitter:site", "@upsoma");
+    setMeta("twitter:creator", "@upsoma");
+
+    // Canonical link
+    let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
+    if (!canonical) {
+      canonical = document.createElement("link");
+      canonical.rel = "canonical";
+      document.head.appendChild(canonical);
+    }
+    canonical.href = "https://upsoma.in/contact";
+
+    // Alternative language links (hreflang)
+    const removeLink = (rel: string) => {
+      const el = document.querySelector(`link[rel="${rel}"]`);
+      if (el) el.remove();
+    };
+    removeLink("alternate");
+    
+    // Add hreflang for English
+    const alternate = document.createElement("link");
+    alternate.rel = "alternate";
+    alternate.hreflang = "en";
+    alternate.href = "https://upsoma.in/contact";
+    document.head.appendChild(alternate);
+
+    // Generate structured data for contact page
+    const organizationData = {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Upsoma",
+      "url": "https://upsoma.in",
+      "logo": "https://upsoma.in/logo.png",
+      "description": "Leading web development and design agency in Delhi specializing in custom websites, e-commerce solutions, and digital marketing",
+      "sameAs": [
+        "https://linkedin.com/company/upsoma",
+        "https://twitter.com/upsoma",
+        "https://facebook.com/upsoma",
+        "https://instagram.com/upsoma",
+        "https://youtube.com/@upsoma"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+91 8178353728",
+        "contactType": "customer service",
+        "availableLanguage": ["English", "Hindi"],
+        "email": "upsomaconsultancy@gmail.com",
+        "contactOption": "TollFree",
+        "areaServed": "Delhi",
+        "serviceType": "Web Development Services"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Delhi",
+        "addressCountry": "IN",
+        "postalCode": "110001",
+        "streetAddress": "Delhi, India"
+      },
+      "areaServed": "Delhi",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Web Development Services",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Custom Website Development",
+              "description": "Tailored web development solutions using modern technologies"
+            }
+          },
+          {
+            "@type": "Offer", 
+            "itemOffered": {
+              "@type": "Service",
+              "name": "E-commerce Development",
+              "description": "Complete e-commerce solutions with payment gateway integration"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service", 
+              "name": "SEO Services",
+              "description": "Search engine optimization to improve online visibility"
+            }
+          }
+        ]
+      }
+    };
+
+    const breadcrumbData = {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://upsoma.in"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Contact",
+          "item": "https://upsoma.in/contact"
+        }
+      ]
+    };
+
+    const websiteData = {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Upsoma",
+      "url": "https://upsoma.in",
+      "description": "Leading web development and design agency in Delhi offering custom website design, e-commerce solutions, and digital marketing services",
+      "potentialAction": {
+        "@type": "ContactAction",
+        "target": "https://upsoma.in/contact",
+        "name": "Contact Upsoma"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Upsoma",
+        "url": "https://upsoma.in"
+      }
+    };
+
+    // Add structured data scripts
+    const scripts = [
+      { id: "contact-organization-ld-json", data: organizationData },
+      { id: "contact-breadcrumb-ld-json", data: breadcrumbData },
+      { id: "contact-website-ld-json", data: websiteData }
+    ];
+
+    scripts.forEach(({ id, data }) => {
+      let script = document.getElementById(id) as HTMLScriptElement | null;
+      if (!script) {
+        script = document.createElement("script");
+        script.type = "application/ld+json";
+        script.id = id;
+        document.head.appendChild(script);
+      }
+      script.text = JSON.stringify(data);
+    });
+
   }, []);
 
   // Removed the auto-submit effect
@@ -145,7 +349,7 @@ export default function Contact() {
       console.error('Error submitting form:', error);
       toast.error('There was an error submitting your form. Please try again.', {
         id: toastId,
-        position: 'center',
+        position: 'top-center',
         style: {
           background: '#FFC080',
           color: '#FF9900',
@@ -181,17 +385,17 @@ export default function Contact() {
     {
       icon: Mail,
       title: "Email Us",
-      content: "hello@trmconsultancy.com",
+      content: "upsomaconsultancy@gmail.com",
       subtext: "We reply within 24 hours",
-      link: "mailto:hello@trmconsultancy.com",
+      link: "mailto:upsomaconsultancy@gmail.com",
       gradient: "from-blue-500 to-cyan-400"
     },
     {
       icon: Phone,
       title: "Call Us",
-      content: "+91-8512-345-678",
+      content: "+91 8178353728",
       subtext: "Mon-Sat, 9AM-7PM IST",
-      link: "tel:+918512345678",
+      link: "tel:+918178353728",
       gradient: "from-green-500 to-teal-400"
     },
     {
@@ -220,7 +424,14 @@ export default function Contact() {
   ];
 
   return (
-    <section className="relative bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50 dark:from-gray-800 dark:via-gray-800 dark:to-gray-900 py-20 overflow-hidden transition-colors duration-300">
+    <>
+      <SEOHead 
+        title="Contact Upsoma - Web Development Agency in Dwarka Delhi"
+        description="Contact Upsoma for expert web development, e-commerce, and SEO services in Dwarka, Delhi. Call +91 8178353728 or email upsomaconsultancy@gmail.com for free consultation. Office in Sector 21, Dwarka."
+        keywords="contact web developer Dwarka, contact web developer Delhi, web design agency contact Dwarka, web design agency contact Delhi, website development company Dwarka, website development company Delhi, e-commerce development contact Dwarka, e-commerce development contact Delhi, SEO services Dwarka, SEO services Delhi, custom website design contact Dwarka, custom website design contact Delhi, Upsoma contact details Dwarka, Upsoma contact details Delhi, web agency near me Dwarka, web agency near me Delhi"
+        canonicalUrl="https://upsoma.in/contact"
+      />
+      <section className="relative bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50 dark:from-gray-800 dark:via-gray-800 dark:to-gray-900 py-20 overflow-hidden transition-colors duration-300">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 left-10 w-72 h-72 bg-blue-200 dark:bg-blue-900 rounded-full mix-blend-multiply filter blur-3xl opacity-30 dark:opacity-10 animate-pulse"></div>
@@ -400,7 +611,7 @@ export default function Contact() {
                     onChange={handleChange}
                     onFocus={() => setFocusedField("message")}
                     onBlur={() => setFocusedField(null)}
-                    rows="6"
+                    rows={6}
                     className={`w-full px-4 py-4 bg-gray-50 dark:bg-gray-600 border rounded-xl text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none transition-all resize-none ${
                       focusedField === "message" 
                         ? "border-blue-500 ring-2 ring-blue-200 dark:ring-blue-800 bg-white dark:bg-gray-600" 
@@ -431,5 +642,6 @@ export default function Contact() {
       </div>
       <div style={{marginTop:"20px"}}><Footer/></div>
     </section>
+    </>
   );
 }

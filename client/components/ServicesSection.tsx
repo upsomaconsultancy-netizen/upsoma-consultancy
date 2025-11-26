@@ -14,7 +14,7 @@ const services = [
     icon: Globe,
     title: "Custom Website Development",
     description:
-      "Bespoke responsive websites built with React, Next.js, and modern technologies. SEO-optimized for Google rankings and high conversion rates.",
+      "Bespoke responsive websites built with React, Next.js, and modern technologies. Expert web development in Dwarka, Delhi. SEO-optimized for Google rankings and high conversion rates.",
     features: [
       "Fully responsive design",
       "SEO optimization",
@@ -27,7 +27,7 @@ const services = [
     icon: ShoppingCart,
     title: "E-Commerce Solutions",
     description:
-      "Complete e-commerce platforms with payment gateway integration (Razorpay, PayPal), inventory management, and analytics dashboard for online selling.",
+      "Complete e-commerce platforms with payment gateway integration (Razorpay, PayPal), inventory management, and analytics dashboard. Leading e-commerce development in Dwarka, Delhi for online selling.",
     features: [
       "Payment integration",
       "Inventory management",
@@ -40,7 +40,7 @@ const services = [
     icon: Zap,
     title: "Website Performance",
     description:
-      "Website optimization, speed enhancement, and SEO improvements to boost your Google rankings and user experience metrics.",
+      "Website optimization, speed enhancement, and SEO improvements to boost your Google rankings. Expert performance optimization services in Dwarka, Delhi for better user experience metrics.",
     features: [
       "Performance audit",
       "Speed optimization",

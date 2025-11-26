@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" 
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://upsoma.com/</loc>
+    <image:image>
+      <image:loc>https://upsoma.com/og-image.jpg</image:loc>
+      <image:title>Upsoma - Web Development Agency Delhi</image:title>
+      <image:caption>Award-winning web development and design agency in Delhi</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://upsoma.com/logo.png</image:loc>
+      <image:title>Upsoma Logo</image:title>
+      <image:caption>Official logo of Upsoma web development agency</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://upsoma.com/office-image.jpg</image:loc>
+      <image:title>Upsoma Office Delhi</image:title>
+      <image:caption>Our web development agency office in Delhi</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://upsoma.in/</loc>
+    <image:image>
+      <image:loc>https://upsoma.in/og-image.jpg</image:loc>
+      <image:title>Upsoma - Web Development Agency Delhi</image:title>
+      <image:caption>Award-winning web development and design agency in Delhi</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://upsoma.in/logo.png</image:loc>
+      <image:title>Upsoma Logo</image:title>
+      <image:caption>Official logo of Upsoma web development agency</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://upsoma.in/office-image.jpg</image:loc>
+      <image:title>Upsoma Office Delhi</image:title>
+      <image:caption>Our web development agency office in Delhi</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://upsoma.com/#services</loc>
+    <image:image>
+      <image:loc>https://upsoma.com/icon-services.png</image:loc>
+      <image:title>Web Development Services</image:title>
+      <image:caption>Custom web development and design services</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://upsoma.in/#services</loc>
+    <image:image>
+      <image:loc>https://upsoma.in/icon-services.png</image:loc>
+      <image:title>Web Development Services</image:title>
+      <image:caption>Custom web development and design services</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://upsoma.com/#works</loc>
+    <image:image>
+      <image:loc>https://upsoma.com/icon-portfolio.png</image:loc>
+      <image:title>Portfolio Projects</image:title>
+      <image:caption>Our web development portfolio and case studies</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://upsoma.in/#works</loc>
+    <image:image>
+      <image:loc>https://upsoma.in/icon-portfolio.png</image:loc>
+      <image:title>Portfolio Projects</image:title>
+      <image:caption>Our web development portfolio and case studies</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://upsoma.com/#contact</loc>
+    <image:image>
+      <image:loc>https://upsoma.com/icon-contact.png</image:loc>
+      <image:title>Contact Us</image:title>
+      <image:caption>Get in touch with Upsoma web development agency</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://upsoma.in/#contact</loc>
+    <image:image>
+      <image:loc>https://upsoma.in/icon-contact.png</image:loc>
+      <image:title>Contact Us</image:title>
+      <image:caption>Get in touch with Upsoma web development agency</image:caption>
+    </image:image>
+  </url>
+</urlset>

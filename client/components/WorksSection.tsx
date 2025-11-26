@@ -6,21 +6,21 @@ export default function TestimonialsSection() {
     {
       img: "https://i.pravatar.cc/500?img=5",
       title: "Best Developers",
-      text: "TRM Consultancy delivered exceptional full-stack web solutions for our company. Their Azure deployment support was top-notch.",
+      text: "Upsoma delivered exceptional full-stack web solutions for our company. Their Azure deployment support was top-notch.",
       name: "Robert Johnson",
       role: "Marketing Director",
     },
     {
       img: "https://i.pravatar.cc/500?img=5",
       title: "Best Developers",
-      text: "TRM Consultancy delivered exceptional full-stack web solutions for our company. Their Azure deployment support was top-notch.",
+      text: "Upsoma delivered exceptional full-stack web solutions for our company. Their Azure deployment support was top-notch.",
       name: "Robert Johnson",
       role: "Marketing Director",
     },
     {
       img: "https://i.pravatar.cc/500?img=5",
       title: "Best Developers",
-      text: "TRM Consultancy delivered exceptional full-stack web solutions for our company. Their Azure deployment support was top-notch.",
+      text: "Upsoma delivered exceptional full-stack web solutions for our company. Their Azure deployment support was top-notch.",
       name: "Robert Johnson",
       role: "Marketing Director",
     }

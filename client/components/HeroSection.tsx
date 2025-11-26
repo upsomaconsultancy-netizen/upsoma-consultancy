@@ -17,7 +17,7 @@ export default function HeroSection() {
         transition={{ duration: 0.8 }}
         className="text-sm uppercase tracking-wide bg-lime-200 dark:bg-lime-800 text-green-900 dark:text-white font-semibold px-3 py-1 rounded-full mb-4 z-10"
       >
-        Creative Digital Experts
+        #1 Web Development Agency in Dwarka Delhi
       </motion.span>
 
       <motion.h1
@@ -46,7 +46,7 @@ export default function HeroSection() {
         transition={{ duration: 1.2 }}
         className="text-gray-700 dark:text-white max-w-2xl mb-8 z-10 text-lg"
       >
-        At <strong>NextGen Web Studio</strong>, we help startups and enterprises craft stunning websites and scalable digital products. Our mission is to make technology beautiful, functional, and growth-driven.
+        At <strong>Upsoma</strong>, Dwarka's #1 Web Development Agency, we help startups and enterprises in Delhi NCR craft stunning websites and scalable digital products. 500+ projects delivered, 98% client satisfaction. Our mission is to make technology beautiful, functional, and growth-driven.
       </motion.p>
 
       <motion.button
@@ -75,12 +75,12 @@ export default function HeroSection() {
           <p className="text-gray-600 dark:text-gray-200 text-sm mb-3 max-w-xs">
             We’ve been helping brands grow with innovative, design-first web solutions that drive engagement and deliver measurable results.
           </p>
-          <img
+            <img
             src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&w=300&q=80"
-            alt="Founder"
+            alt="Upsoma Web Development Team Dwarka Delhi"
             className="w-32 h-32 object-cover rounded-full mb-4 shadow-md border-4 border-white"
           />
-          <p className="text-gray-700 dark:text-white font-semibold">Trusted Since 1984</p>
+          <p className="text-gray-700 dark:text-white font-semibold">Trusted Since 2016</p>
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -104,9 +104,9 @@ export default function HeroSection() {
           className="relative z-10 flex items-center gap-2 text-white dark:text-gray-100 group-hover:text-white transition-colors duration-300"
         >
           <div className="absolute -inset-4 bg-green-200 rounded-2xl blur-2xl opacity-40 animate-pulse"></div>
-          <img
+            <img
             src="/Hero-sec-img.png"
-            alt="Main Person"
+            alt="Upsoma Web Development Agency Dwarka Delhi - Best Web Design Services"
             className="rounded-2xl w-[32rem] h-auto object-cover relative z-10"
           />
         </motion.div>
@@ -126,10 +126,10 @@ export default function HeroSection() {
             </div>
           </div>
           <div className="flex items-center mt-4 -space-x-2">
-            <img src="https://randomuser.me/api/portraits/men/32.jpg" className="w-10 h-10 rounded-full border-2 border-white" />
-            <img src="https://randomuser.me/api/portraits/women/44.jpg" className="w-10 h-10 rounded-full border-2 border-white" />
-            <img src="https://randomuser.me/api/portraits/men/56.jpg" className="w-10 h-10 rounded-full border-2 border-white" />
-            <img src="https://randomuser.me/api/portraits/women/68.jpg" className="w-10 h-10 rounded-full border-2 border-white" />
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Upsoma Web Developer Team Member" className="w-10 h-10 rounded-full border-2 border-white" />
+            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Upsoma Web Designer Team Member" className="w-10 h-10 rounded-full border-2 border-white" />
+            <img src="https://randomuser.me/api/portraits/men/56.jpg" alt="Upsoma SEO Expert Team Member" className="w-10 h-10 rounded-full border-2 border-white" />
+            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Upsoma Digital Marketing Specialist" className="w-10 h-10 rounded-full border-2 border-white" />
           </div>
           <p className="text-gray-600 text-sm mt-2">A team of passionate creators</p>
         </motion.div>
@@ -145,16 +145,16 @@ export default function HeroSection() {
         >
           {[...Array(2)].map((_, i) => (
             <div key={i} className="flex gap-12">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" className="w-16 h-16" />
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" className="w-16 h-16" />
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express" className="w-16 h-16 bg-white p-1 rounded" />
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB" className="w-16 h-16" />
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" className="w-16 h-16" />
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" className="w-16 h-16" />
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" className="w-16 h-16" />
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" className="w-16 h-16" />
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" className="w-16 h-16" />
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" className="w-16 h-16" />
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React Web Development Dwarka Delhi" className="w-16 h-16" />
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js Development Dwarka Delhi" className="w-16 h-16" />
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" alt="Express.js Development Dwarka" className="w-16 h-16 bg-white p-1 rounded" />
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" alt="MongoDB Database Development Dwarka" className="w-16 h-16" />
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL Database Development Dwarka Delhi" className="w-16 h-16" />
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript Development Dwarka Delhi" className="w-16 h-16" />
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5 Web Development Dwarka" className="w-16 h-16" />
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3 Web Design Dwarka Delhi" className="w-16 h-16" />
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub Version Control Dwarka" className="w-16 h-16" />
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript Development Dwarka Delhi" className="w-16 h-16" />
             </div>
           ))}
         </motion.div>
