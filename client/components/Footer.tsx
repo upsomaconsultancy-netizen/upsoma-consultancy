@@ -22,6 +22,7 @@ import {
 import { useRef, useState, useEffect } from "react";
 import "./Footer.css";
 import React from "react";
+import axios from "axios";
 import { toast } from "sonner";
 import {
   FaLinkedinIn,
@@ -88,21 +89,15 @@ const handleContactSubmit = async (e) => {
   });
 
   try {
-    const response = await fetch('http://localhost:5000/submit', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        name: 'Footer Contact',
-        email: email || '',
-        contact: phone,
-        service: 'Footer Inquiry',
-        message: 'Contact request from footer form'
-      })
+    const response = await axios.post('https://upsoma-consultancy.onrender.com/submit', {
+      name: 'Footer Contact',
+      email: email || '',
+      contact: phone,
+      service: 'Footer Inquiry',
+      message: 'Contact request from footer form'
     });
 
-    if (response.ok) {
+    if (response.data) {
       toast.success('Thank you for contacting us! We will get back to you soon.', {
         id: toastId,
         position: 'top-center',

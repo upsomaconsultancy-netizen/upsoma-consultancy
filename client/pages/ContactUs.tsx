@@ -321,7 +321,7 @@ export default function Contact() {
     });
     
     try {
-      const response = await axios.post('http://localhost:5000/submit', formData);
+      const response = await axios.post('https://upsoma-consultancy.onrender.com/submit', formData);
       console.log('Form submitted successfully:', response.data);
       
       toast.success('Thank you for your inquiry! We will get back to you soon.', {
