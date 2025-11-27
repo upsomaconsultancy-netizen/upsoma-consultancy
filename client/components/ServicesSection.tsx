@@ -247,7 +247,6 @@ export default function ServicesSection() {
             to="/contact"
             className="inline-flex items-center gap-2 bg-gradient-to-r to-cyan-500 text-white px-8 py-4 rounded-lg font-semibold hover:shadow-2xl hover:shadow-blue-500/50 transition-all duration-300 transform hover:scale-105"
             style={{ backgroundColor: "#16a34a" }}
-            style={{backgroundColor:"#16a34a"}}
             aria-label="Schedule free consultation for web services"
           >
             Schedule Free Consultation
