@@ -21,6 +21,10 @@ import mongoose from "mongoose";
     },
     message:{
         type:String,
+    },
+    created_AT:{
+        type:Date,
+        default:Date.now
     }
    
     
