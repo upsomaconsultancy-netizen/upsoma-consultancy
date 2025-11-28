@@ -11,43 +11,58 @@ export default function HeroSection() {
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-lime-300 dark:bg-lime-900 opacity-40 dark:opacity-20 blur-3xl rounded-full animate-pulse"></div>
 
       {/* Header Section */}
-      <motion.span
+      <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
         className="text-sm uppercase tracking-wide bg-lime-200 dark:bg-lime-800 text-green-900 dark:text-white font-semibold px-3 py-1 rounded-full mb-4 z-10"
+        role="note"
+        aria-label="Agency recognition"
       >
         #1 Web Development Agency in Dwarka Delhi
-      </motion.span>
+      </motion.div>
 
-      <motion.h1
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-        className="text-4xl md:text-6xl font-extrabold text-gray-900 dark:text-white leading-tight mb-6 z-10 flex flex-col items-center"
-      >
-        Transforming Ideas into
-        <span className="text-green-700 dark:text-white mt-2">
-          <Typewriter
-            options={{
-              strings: ["Digital Reality"],
-              autoStart: true,
-              loop: true,
-              deleteSpeed: 50,
-              delay: 75,
-            }}
-          />
-        </span>
-      </motion.h1>
+      <header className="mb-8 z-10">
+        <motion.h1
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          className="text-4xl md:text-6xl font-extrabold text-gray-900 dark:text-white leading-tight mb-2 flex flex-col items-center"
+        >
+          Web Development & Digital Solutions in Dwarka, Delhi
+        </motion.h1>
+        <motion.p 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.1 }}
+          className="text-2xl md:text-3xl font-bold text-green-700 dark:text-green-400 mb-6"
+        >
+          Transforming Ideas into 
+          <span className="ml-2">
+            <Typewriter
+              options={{
+                strings: ["Digital Reality"],
+                autoStart: true,
+                loop: true,
+                deleteSpeed: 50,
+                delay: 75,
+              }}
+            />
+          </span>
+        </motion.p>
+      </header>
 
-      <motion.p
+      <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.2 }}
         className="text-gray-700 dark:text-white max-w-2xl mb-8 z-10 text-lg"
       >
-        At <strong>Upsoma</strong>, Dwarka's #1 Web Development Agency, we help startups and enterprises in Delhi NCR craft stunning websites and scalable digital products. 500+ projects delivered, 98% client satisfaction. Our mission is to make technology beautiful, functional, and growth-driven.
-      </motion.p>
+        <h2 className="sr-only">About Upsoma Web Development Agency</h2>
+        <p>
+          At <strong>Upsoma</strong>, Dwarka's #1 Web Development Agency, we help startups and enterprises in Delhi NCR craft stunning websites and scalable digital products. 500+ projects delivered, 98% client satisfaction. Our mission is to make technology beautiful, functional, and growth-driven.
+        </p>
+      </motion.div>
 
       <motion.button
         whileHover={{ scale: 1.05 }}
