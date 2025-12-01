@@ -18,6 +18,8 @@ import About from "./pages/About";
 import TermsOfService from "./pages/TermsOfService";
 import CookiesPolicy from "./pages/CookiesPolicy";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
+import { Dashboard } from "./components/Dashboard.jsx";
+import SachinQuotation from "./Quotations/SachinQuotation";
 
 const queryClient = new QueryClient();
 
@@ -179,6 +181,7 @@ const App = () => (
             <Route path="/terms-of-service" element={<TermsOfService />} />
             <Route path="/cookie-policy" element={<CookiesPolicy />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            
             <Route 
               path="/contact" 
               element={
@@ -187,6 +190,7 @@ const App = () => (
                 </ContactLayout>
               } 
             />
+            <Route path="/SachinQuotation" element={<SachinQuotation />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>

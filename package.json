@@ -24,6 +24,8 @@
     "axios": "^1.13.2",
     "dotenv": "^17.2.1",
     "express": "^5.1.0",
+    "html2canvas": "^1.4.1",
+    "jspdf": "^3.0.4",
     "react-hot-toast": "^2.6.0",
     "react-icons": "^5.5.0",
     "toaster": "^0.1.2",
